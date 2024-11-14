@@ -1,30 +1,36 @@
-//export class nodo {
-  //  constructor (value) {
-      //  this.value = value;
-    //    this.next = null;
-    //}
-//}
+export class Nodo {
+    constructor (value) {
+        this.value = value;
+        this.next = null;
+    }
+}
 
 export class listaSimple {
     constructor() {
         this.head = null;
+    
+    }
 
-    }
-    insertNode(value){
-        const newNode = new nodo(value);
-        if (this.head){
+    insertNodo(value){
+        const newNode = new Nodo (value);
+        if (!this.head){
+            this.head = newNode;
+            return;
+        } else {
+            let currentNode = this.head;
+              while (currentNode.next) {
+              currentNode = currentNode.next;
+              }
+
+             currentNode.next = newNode;
         }
-        let currentNode = this.head;
-        while (currentNode.next) {
-            currentNode = currentNode.next;
-        }
-        currentNode.next = newNode;
+        
     }
-    displayList (value) {
+    displayList () {
         let currentNode = this.head;
         while (currentNode) {
             console.log(currentNode.value);
-            currentNode = this.next;
+            currentNode = currentNode.next;
         }
     }
     findNode (value){
@@ -58,3 +64,4 @@ const lista = new listaSimple();
 
 listaSimple.insertNode = ("valor 1");
 listaSimple.insertNode = ("valor 2");
+listaSimple.displayList = ();
