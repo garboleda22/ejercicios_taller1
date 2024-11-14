@@ -1,15 +1,11 @@
-//TALLER EJERCICIOS LISTAS ENLAZADAS
-//EDER ARBOLEDA
-//JhON HENRY 
-
-class nuevoNodo {
+export class nuevoNodo {
     constructor (value) {
         this.value = value;
         this.next = null;
     }
 }
 
-class listaSimple {
+export class listaSimple {
     constructor() {
         this.head = null;
     
@@ -63,15 +59,9 @@ class listaSimple {
     }
 }
 
-//import { listaSimple } from './listaSimple.js';
+import { listaSimple } from './listaSimple.mjs';
 const lista = new listaSimple();
 
-lista.insertNodo ("valor 1")
-lista.insertNodo ("valor 2")
-lista.displayList();
-console.log("jfghj");
-lista.deleteNode("valor 1");
-lista.displayList();
-console.log("fgh");
-
-console.log(lista.findNode("valor 2"));
+listaSimple.insertNode = ("valor 1");
+listaSimple.insertNode = ("valor 2");
+//listaSimple.displayList = ();
