@@ -1,9 +1,9 @@
-export class nodo {
-    constructor (value) {
-        this.value = value;
-        this.next = null;
-    }
-}
+//export class nodo {
+  //  constructor (value) {
+      //  this.value = value;
+    //    this.next = null;
+    //}
+//}
 
 export class listaSimple {
     constructor() {
@@ -27,7 +27,7 @@ export class listaSimple {
             currentNode = this.next;
         }
     }
-    findValue (value){
+    findNode (value){
         let currentNode = this.head;
         while (currentNode) {
             if (currentNode.value === value) {
@@ -37,5 +37,24 @@ export class listaSimple {
         }
         return "NO SE ENCONTRO ELEMENTO";
     }
-    
+    deleteNode (value) {
+        let currentNode = this.head;
+        if (currentNode.value === value) {
+            this.head = currentNode.next;
+            return;
+        }
+        while (currentNode.next) {
+            if (currentNode.next.value === value) {
+                currentNode.next = currentNode.next.next;
+                return;
+            }
+            currentNode = currentNode.next;
+        }
+    }
 }
+
+import { listaSimple } from './listaSimple.js';
+const lista = new listaSimple();
+
+listaSimple.insertNode = ("valor 1");
+listaSimple.insertNode = ("valor 2");
